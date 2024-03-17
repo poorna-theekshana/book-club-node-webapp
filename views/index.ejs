@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book Club</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <h1>Welcome to our Book Club!</h1>
+    <form action="/submit" method="post">
+        <input type="text" name="book" placeholder="Enter a book title">
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Submitted Books:</h2>
+    <ul>
+        <% books.forEach(function(book) { %>
+            <li>
+                <%= book %>
+            </li>
+            <% }); %>
+    </ul>
+</body>
+
+</html>
